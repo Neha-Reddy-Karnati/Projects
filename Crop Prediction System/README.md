@@ -1,3 +1,20 @@
+## About the project:
+<p align="justify">Agriculture is one of the most important sectors of the Indian economy and India ranks second
+worldwide in farm outputs. Since India is the second most populated country in the world we
+cannot afford to make mistakes when it comes to the agricultural field. But, one of the common
+mistakes made by the farmer is not choosing an appropriate crop for the soil. This prediction model
+helps to recommend the most suitable crop to grow in a particular farm based on various parameters
+like nitrogen, potassium, phosphorus, the temperature in degree Celsius, humidity, pH of the soil,
+rainfall in mm. It is a machine learning project and the dataset is a CSV file containing all the
+above-mentioned parameters. This predictive model can be implemented using different
+classification algorithms in Machine learning using python. Since ensemble algorithms are expected
+to give better efficiency and produce optimal predictions in the case of large samples of data, we
+can use them to build our prediction model. On giving an array containing values of different
+parameters mentioned above as input we get a single-element array containing the name of the crop
+that best suits the soil with given parameters.</p>
+ 
+ 
+ 
  ## Steps to run the project
  Step 1: Download crop recommendation dataset from Kaggle using this link: \
  https://www.kaggle.com/atharvaingle/crop-recommendation-dataset 
