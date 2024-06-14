@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head><link rel="stylesheet" href="mystyle.css">
+<style>
+::-webkit-input-placeholder { 
+  font-weight: bold;
+  color : black
+}
+body {
+  background-image: url('https://keepgif.com/gif/modern-farming.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:50% 100%;
+  background-position: right;
+  padding: 10px;
+  background-position-y: 10px;
+  
+  
+}
 
+input[type=text], select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 50%;
+  background-color: #323392;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+div {
+  border-radius: 5px;
+  padding: 80px;
+  color:white;
+  position: left;
+  width:37%;
+  height:100%;
+  float:left;
+  
+  font-size: larger;
+  font-weight: bold;
+  background-color: green;
+  
+}
+h1{
+  color: lightgreen;
+  font-size: xx-large;
+  font-weight: bold;
+}
+#inner{
+  width: 50%;
+  background-color: #3aa3b1;
+  color: rgb(44, 54, 75);
+  padding: 5px 5px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+}
+button{
+    font-size: large;
+    font-weight: bold;
+    background-color: black;
+    height: 40px;
+    color: white;
+    width: 100px;
+    
+}
+
+</style>
+</head>
+
+<body>
+<div >
+<h1>ABOUT US</h1>
+<P>Since agriculture is one of the important sectors of our society, we take it as our priority. We are here
+   to help you find the best crop that suits your soil.</br></br>
+   You can predict the crop by providing us more details about you soil on the next page that you can access by clicking the proceed button
+</br></br>
+For more details you can contact us on the following numbers:</br></br>
++91 4565677891</br>
++91 3454565678</br>
+
+
+
+</P>
+
+
+<form action="{{url_for('second')}}">
+   <button  >Proceed</button>
+</form>
+</div>
+
+
+</body>
+</html>
