@@ -1,0 +1,62 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  
+  <div class="row">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 bg-success"></div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 bg-success"></div>
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-12 bg-success"></div>
+    </div> 
+    
+    
+    
+    <button class="btn-primary pull right" (click)="goToCart()">Cart</button>
+    <button class="btn-primary pull right" (click)="goToOrders()">Orders</button>
+    
+
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-12" *ngFor="let product of products">
+                <div class="card">
+                    <img class="card-img-top" [src]="product.proImage" height="250px"/>
+                    <div class="card-body" height="250px">
+                        <p class="card-text" style="height: 50px">{{product.description}}</p>
+                        <h2>Rs.{{product.price}}</h2>
+                        <button class="btn btn-primary"  (click)="showpopup(product)" >Add To Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+    <div class="container">
+        <div class="modal fade" id="quantityModel">
+            <div class="modal-dialog w3-animate-top">
+                <div class="modal-content" style="padding-bottom:10px;">
+                  <div class="modal-header">
+                    <span class="w3-button w3-display-topright" data-dismiss="modal">close</span>
+                    <h4 class="modal-title"
+                      style="font-family: 'Courier New', Courier, monospace;font-weight: bold;color:rgb(5, 18, 77)">
+                    </h4>
+                    </div>
+                    <div class="modal-body">
+                        <form class="form-group">
+                            Enter Quantity: <input type="text" name="quantity" [(ngModel)]='cartItem.quantity'
+                                 required class="form-control"><br>
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary btn-sm" (click)="addToCart()"
+                            data-dismiss="modal">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
