@@ -1,0 +1,82 @@
+<head>
+    <style>
+      body {
+        width: 100%;
+        height: 100%;
+        background: url('your-url') no-repeat center;
+        background-size: 100% 100%;
+        background-position: top center;
+        margin-top: -15px;
+        background-image: url('https://img.freepik.com/free-photo/close-up-table-surface-front-blur-shopping-mall_23-2147907223.jpg?size=626&ext=jpg');
+      }
+  
+  
+      button {
+        background: #ff5722;
+        transition: 0.2s ease;
+        margin-top: 30px;
+      }
+  
+      form {
+        padding-right: 369px;
+        padding-left: 375px;
+        padding-top: 10px;
+        padding-bottom: 100px;
+      }
+    </style>
+  </head>
+  
+  <body>
+    
+     <fieldset>
+      <label>Customer Registration</label>
+      <div class="container">
+      
+        <form #registerForm="ngForm" (ngSubmit)="register(registerForm.value)"  novalidate class="form-group">
+          <h3 style="text-align: center; color:#8B0000">LOOKS LIKE YOU'RE NEW HERE!</h3>
+          <h4 style="text-align: center; color:#dc143c">Sign up here to get started</h4>
+  
+          <br>
+           
+          <div class="input-group">
+            <input class="form-control" type="text" ngModel placeholder="Enter name" name="custName" required>
+          </div>
+          <br>
+          <div class="input-group">
+            <input class="form-control" type="email" name="email" ngModel required pattern="[^ @]*@[^ @]*"
+              placeholder="Enter Email Address">
+          </div>
+          <br>
+          <div class="input-group">
+          <!--  <input placeholder="Enter gender:" class="form-control" type="text" ngModel name="gender" required>-->
+            <select name="gender" class="form-control" ngModel placeholder="Enter Gender" required>
+              <option value="" disabled selected hidden>Select Gender</option>
+              <option value="MALE">MALE</option>
+              <option value="FEMALE">FEMALE</option>
+              <option value="PREFER, NOT TO SAY">Prefer, not to say</option>
+            </select>
+          </div>
+          <br>
+          <div class="input-group">
+            <input class="form-control" type="password" name="password" ngModel placeholder="Enter password" required>
+          </div>
+          <br>
+          <div class="input-group">
+            <input class="form-control" type="tel" ngModel placeholder="Enter mobile" name="mobile" required
+              pattern="[789][0-9]{9}">
+          </div>
+          <br>
+          
+          <br>
+         
+          <!-- <div class="input-group">
+            <input class="form-control" type="password" ngModel placeholder="Re-enter Password" name="confpassword"
+              id="confPass" required>
+          </div> -->
+          <button class="btn btn-success">Register</button>
+  
+        </form>
+      </div>
+  
+    </fieldset> 
+  </body>
