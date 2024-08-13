@@ -1,0 +1,86 @@
+<div class="container">
+    <table class="table table-bordered table-striped  table-hover table-sm text-center"
+        style="opacity: 0.9;width:900px;">
+        <thead>
+            <tr class="bg- text-black">
+                <th>ProducId</th>
+                <th>ProductImage</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Total Price</th>
+                <th>Delete</th>
+                <th>Edit</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of cartItems">
+                <td>{{item.proId}}</td>
+                <td><div class="card">
+                    <img class="card-img-top" [src]="item.proImage" height="250px"/></div>
+                </td>
+                <td>{{item.quantity}}</td>
+                <td>₹{{item.price}}</td>
+                <td>₹{{item.totalPrice}}</td>
+                <td><button (click) = "delete(item)">Delete</button>
+                <td><button (click)="edit(item)">Edit</button></td>
+               
+            </tr>
+
+        </tbody>
+    </table>
+    Total Price:{{amount}}
+    <button  class="btn-primary"  (click)="showpopup2()">Confirm</button>
+</div>
+
+
+<div class="container">
+    <div class="modal fade" id="quantityModel2">
+    <div class="modal-dialog w3-animate-top">
+        <div class="modal-content" style="padding-bottom:10px;">
+          <div class="modal-header">
+            <span class="w3-button w3-display-topright" data-dismiss="modal">close</span>
+            <h4 class="modal-title"
+              style="font-family: 'Courier New', Courier, monospace;font-weight: bold;color:rgb(5, 18, 77)">UPDATE QUANTITY
+            </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-group">
+                        Enter Quantity: <input type="text" name="quantity" [(ngModel)]='editObject.quantity'
+                             required class="form-control"><br>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button (click)="update()" class="btn btn-primary btn-sm" data-dismiss="modal">Update</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="modal fade" id="addressModel">
+        <div class="modal-dialog w3-animate-top">
+            <div class="modal-content" style="padding-bottom:10px;">
+              <div class="modal-header">
+                <span class="w3-button w3-display-topright" data-dismiss="modal">close</span>
+                <h4 class="modal-title"
+                  style="font-family: 'Courier New', Courier, monospace;font-weight: bold;color:rgb(5, 18, 77)">Enter your address
+                </h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-group">
+                        Enter Address: <input type="text" name="address" [(ngModel)]='address'
+                             required class="form-control"><br>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary btn-sm" (click)="Buy()"
+                        data-dismiss="modal">Confirm order</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
